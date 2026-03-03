@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SvgMask: React.FC = () => (
+const HippoMask: React.FC = () => (
     <svg width="576" height="349" viewBox="0 0 576 349" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
             <mask id="mask">
@@ -12,4 +12,4 @@ const SvgMask: React.FC = () => (
     </svg>
 );
 
-export default SvgMask;
+export default HippoMask;

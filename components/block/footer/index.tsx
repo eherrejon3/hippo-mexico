@@ -1,16 +1,16 @@
-import Link from "next/link";
+import Content from './Content';
 
 export function Footer() {
     return (
-        <footer className="py-6 md:py-10">
-            <div className="px-8 mx-auto max-w-[640px] text-center">
-                <h2 className="mb-16 text-xl md:text-2xl leading-relaxed">
-                    Are you interested to working together with me? Contact me at <Link className="font-medium border-b border-foreground" href="mailto:fachririyanto@gmail.com">fachririyanto@gmail.com</Link>
-                </h2>
-                <p className="pb-10 text-sm text-muted-foreground">
-                    &copy; Present. Fachri Riyanto.
-                </p>
+        <div 
+            className='relative h-[400px] lg:h-[600px]'
+            style={{clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)"}}
+        >
+            <div className='relative h-[calc(100vh+400px)] lg:h-[calc(100vh+600px)] -top-[100vh]'>
+                <div className='h-[400px] lg:h-[600px] sticky top-[calc(100vh-400px)] lg:top-[calc(100vh-600px)]'>
+                    <Content />
+                </div>
             </div>
-        </footer>
+        </div>
     );
 }

@@ -1,15 +1,15 @@
 "use client"
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { Chrono } from 'react-chrono';
-import { items, TimelineItem } from "./timeline";
+import { Button } from "flowbite-react";
 
 import { ImageCover } from "@/components/custom/image";
+import { HippoTimeline } from "@/components/custom/timeline";
 
 import type { RedpumpkinPost } from "./types";
 import { data } from "./data";
 
-export function ICSCompute() {
+export function Rounds() {
     return (
         <section className="py-10 md:py-12 lg:py-16">
             <div className="container">
@@ -19,12 +19,29 @@ export function ICSCompute() {
                     </h2>
                     <div className="w-full md:pl-10 md:self-end">
                         <div className="md:max-w-[540px] md:text-lg">
-                            Testing
+                            Plan to attend Hippo the Contest 2026!
                         </div>
                     </div>
                 </header>
             </div>
             <div className="container wide">
+                <HippoTimeline />
+                <p className="mt-6 leading-relaxed">
+                    The Olympiad is an international event which promotes the English language, challenges students from around the globe to 
+                    compete in English language knowledge, and showcases the level of english learning  The Olympiad encourages the development 
+                    of a shared sense of identity, integration and serves as a role model for young people living together as one community. 
+                    The main goal is to create and nourish friendly relations, international understanding and a spirit of healthy competition 
+                    between young people interested in English language from all around the world.  
+                </p>
+                <p className="py-3">Futher Hippo information is available</p>
+                <div className="max-w-[50vw] sm:max-w-[30vw] lg:max-w-[20vw]">
+                <Button className="bg-[#fbba00] dark:bg-[#97bddd] dark:text-[#000]" color="#97bddd" href="https://hippo-thecontest.org/">
+                    Hippo the Contest
+                    <ArrowRight className="ml-2 h-3 w-3" />
+                </Button>
+                </div>
+            </div>
+            {/* <div className="container wide">
                 <div className="flex flex-wrap gap-4 md:gap-0 md:-mx-4">
                     {
                         data.map((item, key) => (
@@ -32,12 +49,7 @@ export function ICSCompute() {
                         ))
                     }
                 </div>
-            </div>
-            <div className="container !max-w-[840px]">
-                <p className="mt-6 leading-relaxed">
-                    Besides the list above, there are other projects that cannot be mentioned here because of NDA or it's still on PoC (Proof of Concept). I do some work such as create a web dashboard that integrate with API, build an embeded chat script to show it in customer website, create Redpumpkin UI Kit in Storybook, setup Keycloak for Redpumpkin Suite project, and build an OCR API to extract data from PDF into Excel using ModelArk from BytePlus (AI Engineer work).
-                </p>
-            </div>
+            </div> */}
         </section>
     );
 }

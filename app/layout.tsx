@@ -5,6 +5,9 @@ import Script from "next/script";
 import "./globals.css";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { Header } from "@/components/block/header";
+import { Footer } from "@/components/block/footer";
+import { BgSceneAnimation } from "@/components/animation";
 
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -19,7 +22,7 @@ const fontSans = Inter({
 export const metadata: Metadata = {
     title: {
         template: "Hippo Mexico",
-        default: "Fachri Riyanto",
+        default: "Hippo Mexico",
     },
     description: "Hi, i'm Fachri Riyanto, Full-Stack Developer who love to build products using modern technologies, and AI vibe code.",
     robots: "index, follow",
@@ -61,7 +64,10 @@ export default function RootLayout({
                     enableSystem
                     disableTransitionOnChange
                     >
+                    <Header/>
                     {children}
+                    <Footer />
+                    <BgSceneAnimation />
                 </ThemeProvider>
                 <Script
                     async

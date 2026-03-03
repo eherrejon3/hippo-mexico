@@ -12,8 +12,8 @@ export function BgSceneAnimation() {
         case 1:
             return <Sand />;
         case 2:
-            return <Neural />;
-        default:
             return null;
+        default:
+            return <Neural />;
     }
 }

@@ -4,7 +4,7 @@ import { Header } from "@/components/block/header";
 export default function RegistrationPage() {
   return (
     <>
-    <Header/>
+    
     </>
   );
 }

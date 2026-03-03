@@ -1,16 +1,10 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 
-import { Header } from "@/components/block/header";
 import { Hero } from "@/components/block/hero";
 import { Featured } from "@/components/block/featured";
-import { ICSCompute } from "@/components/block/icscompute";
-import { Freelance } from "@/components/block/freelance";
-import { OpenSource } from "@/components/block/open-source";
-import { BINUS } from "@/components/block/binus";
-import { Footer } from "@/components/block/footer";
+import { Rounds } from "@/components/block/icscompute";
 
-import { BgSceneAnimation } from "@/components/animation";
 
 export const metadata: Metadata = {
     title: "Hippo Mexico",
@@ -46,18 +40,10 @@ export default function Page() {
                     }),
                 }}
             />
-            <Header />
             <Hero />
-            <ICSCompute />
-            {/* <Featured /> */}
+            <Rounds />
             <Suspense>
                 <Featured />
-                {/* <ICSCompute /> */}
-                <Freelance />
-                <OpenSource />
-                <BINUS />
-                <Footer />
-                <BgSceneAnimation />
             </Suspense>
         </>
     );

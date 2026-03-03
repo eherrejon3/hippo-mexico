@@ -4,7 +4,7 @@ import { Header } from "@/components/block/header";
 export default function CategoriesPage() {
   return (
     <>
-    <Header/>
+    
     </>
   );
 }
