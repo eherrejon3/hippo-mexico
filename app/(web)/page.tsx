@@ -21,8 +21,8 @@ export default function Page() {
                         "@context": "https://schema.org",
                         "@type": "Person",
                         "name": "Hippo Mexico",
-                        "url": "https://www.hippomexico.com/",
-                        "logo": "https://friyanto.vercel.app/favicon-270x270.png",
+                        "url": "https://hippo-mexico.vercel.app/",
+                        "logo": "https://hippo-mexico.vercel.app/favicon-270x270.png",
                         "description": "Official Website for Hippo the Contest: Mexico.",
                     }),
                 }}
