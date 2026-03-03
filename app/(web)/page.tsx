@@ -20,23 +20,10 @@ export default function Page() {
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "Person",
-                        "name": "Fachri Riyanto",
-                        "url": "https://friyanto.vercel.app",
+                        "name": "Hippo Mexico",
+                        "url": "https://www.hippomexico.com/",
                         "logo": "https://friyanto.vercel.app/favicon-270x270.png",
-                        "description": "Hi, i'm Fachri Riyanto, Full-Stack Developer who love to build products using modern technologies, and AI vibe code.",
-                        "sameAs": [
-                            "https://www.linkedin.com/in/friyanto/",
-                            "https://github.com/fachririyanto"
-                        ],
-                        "address": {
-                            "@type": "PostalAddress",
-                            "addressLocality": "Jakarta",
-                            "addressCountry": "Indonesia"
-                        },
-                        "contactPoint": {
-                            "@type": "ContactPoint",
-                            "email": "fachririyanto@gmail.com"
-                        }
+                        "description": "Official Website for Hippo the Contest: Mexico.",
                     }),
                 }}
             />
