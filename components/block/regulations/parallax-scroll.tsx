@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import styles from './page.module.css';
 import Image from 'next/image';
 import Lenis from '@studio-freight/lenis'
-import { useTransform, useScroll, motion } from 'framer-motion';
+import { useTransform, useScroll, motion, MotionValue } from 'framer-motion';
 
 const images = [
   "PHOTO-2025-04-08-23-12-52.jpg",
@@ -57,19 +57,21 @@ export default function Home() {
   }, [])
 
   return (
-    // <main className={styles.main}>
-      <div ref={gallery} className={styles.gallery}>
-        <Column images={[images[0], images[1], images[2]]} y={y}/>
-        <Column images={[images[3], images[4], images[5]]} y={y2}/>
-        <Column images={[images[6], images[7], images[8]]} y={y3}/>
-        <Column images={[images[9], images[10], images[11]]} y={y4}/>
-      </div>
-    //   {/* <div className={styles.spacer}></div> */}
-    // </main>
+    <div ref={gallery} className={styles.gallery}>
+      <Column images={[images[0], images[1], images[2]]} y={y}/>
+      <Column images={[images[3], images[4], images[5]]} y={y2}/>
+      <Column images={[images[6], images[7], images[8]]} y={y3}/>
+      <Column images={[images[9], images[10], images[11]]} y={y4}/>
+    </div>
   )
 }
 
-const Column = ({images, y}) => {
+interface ColumnProps {
+  images: string[];
+  y: MotionValue<number>;
+}
+
+const Column: React.FC<ColumnProps> = ({ images, y }) => {
   return (
     <motion.div 
       className={styles.column}
