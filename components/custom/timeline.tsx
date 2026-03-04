@@ -22,9 +22,9 @@ export function HippoTimeline() {
         { date: '28 September - 1 October 2026', title: 'WORLD FINALS', subtitle: "Venue: Spoleto, Italy", description: 'The World Finals bring together the top students from around the globe: those who qualified directly from the National Finals, the winners of the Continental Rounds, and the champions of the Play-Off Qualifiers. This is the ultimate stage of the Contest, where the best of the best compete for the world title.' },
     ];
   return (
-    <Timeline className="" horizontal>
+    <Timeline horizontal>
         {timelineData.map((item, index) => (
-            <TimelineItem key={index} className="md:w-1/6 ">
+            <TimelineItem key={index} className="overflow-hidden md:w-1/2 lg:w-1/6">
                 <TimelinePoint />
                     <TimelineContent>
                         {item.date && <TimelineTime className="border border-default-medium px-1.5 py-0.5 rounded">{item.date}</TimelineTime>}

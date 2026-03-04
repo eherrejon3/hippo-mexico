@@ -33,8 +33,8 @@ export function Regulations() {
                             ))
                         }
                     </div>
-                    <h1>Special Regulation Classifications (for students that have all classes in english language):</h1>
-                    <div className="flex flex-wrap gap-3 md:gap-0 md:-mx-3">
+                    <h1 className="py-8">Special Regulation Classifications (for students that have all classes in english language):</h1>
+                    <div className="flex flex-wrap gap-3 md:gap-0 md:-mx-3 pb-5">
                         {
                             data2.map((item, key) => (
                                 <PostSpecialItem key={key} item={item} />

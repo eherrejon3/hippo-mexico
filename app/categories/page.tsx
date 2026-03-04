@@ -1,15 +1,17 @@
 "use client"
 import Image from "next/image";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useId } from 'react';
 import { AccordionCategories } from "@/components/custom/accordian";
 
 const useIsMobile = (): boolean => {
-  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
+      const width = window.innerWidth;
+      setIsMobile(width <= 768);
     };
+    handleResize();
 
     window.addEventListener('resize', handleResize);
     return () => {

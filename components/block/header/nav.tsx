@@ -56,7 +56,7 @@ export function Nav() {
                     </Link>
                 </div>
                 <div className="pl-8 lg:flex">
-                    <ul className="flex gap-5 md:gap-8 items-center">
+                    <ul className="invisible md:visible flex gap-5 md:gap-8 items-center">
                         <NavLink href="/about" target="_self">
                             About
                         </NavLink>
@@ -72,25 +72,26 @@ export function Nav() {
                         <li>
                             <ButtonSwitchTheme />
                         </li>
-                        <div className="sm:hidden">
-                            {/* <!-- Mobile menu button--> */}
-                            <button type="button" command="--toggle" commandfor={mobilemenu} className={cn("relative inline-flex items-center justify-center rounded-md p-2 text-[#000000] dark:text-[#ffffff] hover:bg-white/5 hover:text-[#fbba00] dark:hover:text-[#97bddd] focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500")}>
-                                <span className="absolute -inset-0.5"></span>
-                                <span className="sr-only">Open main menu</span>
-                                {/* Hamburger svg */}
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" data-slot="icon" aria-hidden="true" className="size-6 in-aria-expanded:hidden">
-                                <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                                {/* x svg */}
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" data-slot="icon" aria-hidden="true" className="size-6 not-in-aria-expanded:hidden">
-                                <path d="M6 18 18 6M6 6l12 12" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
                     </ul>
+                    <div className="absolute right-4 flex md:hidden" style={{ marginTop: '-40px' }}>
+                        {/* <!-- Mobile menu button--> */}
+                        <button type="button" command="--toggle" commandfor={mobilemenu} className={cn("relative inline-flex items-center justify-center rounded-md p-2 text-[#000000] dark:text-[#ffffff] hover:bg-white/5 hover:text-[#fbba00] dark:hover:text-[#97bddd] focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500")}>
+                            <span className="absolute -inset-0.5"></span>
+                            <span className="sr-only">Open main menu</span>
+                            {/* Hamburger svg */}
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" data-slot="icon" aria-hidden="true" className="size-6 in-aria-expanded:hidden">
+                            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                            {/* x svg */}
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" data-slot="icon" aria-hidden="true" className="size-6 not-in-aria-expanded:hidden">
+                            <path d="M6 18 18 6M6 6l12 12" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </button>
+                        <ButtonSwitchTheme />
+                    </div>
                 </div>
             </div>
-            <ElDisclosure id={mobilemenu} hidden className="block sm:hidden">
+            <ElDisclosure id={mobilemenu} hidden className="block md:hidden">
                 <div className={cn("z-10 space-y-1 align-text-right px-2 pt-2 pb-3 bg-[rgba(248,248,248,.9)] dark:bg-[#222222]", hasBackground && "bg-[rgba(248,248,248,.9)] dark:bg-[rgba(24,24,24,.9)]")}>
                     <a href="/about" className="block rounded-md px-3 py-2 text-base font-medium hover:bg-[#231F20]/5 dark:hover:bg-[#FFFFFF]/10 hover:text-[#fbba00] dark:hover:text-[#97bddd]">
                         About
@@ -117,7 +118,7 @@ function NavLink({ href, target, children }: {
 }) {
     return (
         <li className="group">
-            <Link target={target} href={href} className="invisible md:visible block font-medium text-sm py-3 md:text-base">
+            <Link target={target} href={href} className="block font-medium text-sm py-3 md:text-base">
                 <span className="group-hover:border-b group-hover:border-foreground">
                     {children}
                 </span>

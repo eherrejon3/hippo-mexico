@@ -54,16 +54,16 @@ function BigPostItem({ item }: { item: ItemPost; }) {
                 <p className="mt-2 text-muted-foreground">
                     {item.description}
                 </p>
-                <div className="mt-8 flex justify-between items-center">
+                <div className="mt-8 gap-3 flex justify-between items-center">
                     {item.id == "2" && <Link href="/files/Hippo-2026-Venue-Approval-Form.pdf" target="_blank" download>
-                        <button className="px-4 py-2 bg-blue-500 text-white rounded">
-                            Download "Venue Approval Form"
+                        <button className="px-1 md:px-4 py-2 bg-[#003758] dark:bg-[#97bddd] text-white rounded">
+                            Venue Approval Form
                         </button>
                     </Link>}
                     <Link
                         href={item.url}
                         target="_blank"
-                        className="inline-flex gap-2 items-center"
+                        className="inline-flex gap-0 md:gap-2 items-center"
                         >
                         {item.id == "2" ? <span className="font-medium">Inquire about School Registration</span>:
                         <span className="font-medium">Inquire about Student Registration</span>}
