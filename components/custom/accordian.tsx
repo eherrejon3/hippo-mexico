@@ -13,11 +13,12 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
+
+
 export function AccordionCategories() {
   return (
     <Accordion
       type="multiple"
-      className="min-w-[100vh]"
     >
       <AccordionItem value="regular">
         <AccordionTrigger className="text-[20px]">Regular Categories</AccordionTrigger>
