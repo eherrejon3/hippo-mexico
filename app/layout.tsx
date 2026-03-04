@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { EB_Garamond, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
 import "./globals.css";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -77,7 +78,7 @@ export default function RootLayout({
                     data-user-id=""
                 ></Script> */}
             </body>
-            {/* <GoogleAnalytics gaId="G-1XTC88KYJZ" /> */}
+            <Analytics />
         </html>
     );
 }
