@@ -113,6 +113,31 @@ export default function ContactsPage() {
           </Accordion>
         </CardFooter>
       </Card>
+
+      <Card className="relative mx-4 mb-4 w-full max-w-sm pt-0">
+        <img
+          src="/images/portfolio/coordinator_sonora.jpg"
+          alt="Event cover"
+          className="relative z-20 w-full object-cover"
+        />
+        <CardHeader>
+          <CardTitle className="text-[25px]">Ruth Haydee Quintero Ortega</CardTitle>
+          <Badge variant="secondary">Coordinator: Sonora</Badge>
+        </CardHeader>
+        <CardFooter className="min-w-full">
+          <Accordion type="single" collapsible defaultValue="item-1">
+            <AccordionItem value="item-1">
+              <AccordionTrigger className="text-[15px]">Contact Information</AccordionTrigger>
+              <AccordionContent className="text-[15px]">
+                Mail: <a href="mailto:ruthquintero197@gmail.com" className="dark:text-[#0084b4] dark:hover:text-[#97bddd] text-[#f39200] hover:text-[#fbba00]"><u>ruthquintero197@gmail.com</u></a>
+              </AccordionContent>
+              <AccordionContent className="text-[15px]">
+                Tel: +52 64 4161 7148
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </CardFooter>
+      </Card>
     </div>
     <p className="container text-center text-[20px] pb-10">For any other further inquiries, contact <a href="mailto:info@hippo-thecontest.org" className="dark:text-[#0084b4] dark:hover:text-[#97bddd] text-[#f39200] hover:text-[#fbba00]"><u>info@hippo-thecontest.org</u></a> for any more questions.</p>
     </>

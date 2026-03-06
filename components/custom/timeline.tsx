@@ -35,6 +35,7 @@ export function HippoTimeline() {
                         </div>
                         <TimelineBody>
                             <p>{item.description}</p>
+                            {item.title == "REGISTRATION" && <p className="font-bold">16 April 2026</p>}
                         </TimelineBody>
                         {item.learnmore == true && 
                         <a href={item.url} target="_blank">

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Mail } from "lucide-react";
 import Image from "next/image";
 import HippoMask from "@/components/custom/mask";
+import VideoPlayer from "@/components/custom/videoPlayer";
 
 import { buttonVariants } from "@/components/ui/button";
 import { ButtonMyWork } from "./button-my-work";
@@ -9,6 +10,9 @@ import { ButtonMyWork } from "./button-my-work";
 export function Hero() {
     return (
         <section className="relative py-60 md:py-60 lg:py-80 xl:py-85 overflow-hidden">
+            
+            
+            {/* <VideoPlayer src="/videos/banner.mp4" width="100%" /> */}
             <Image
                 src="/images/mexico-hippo8.jpg"
                 alt="IA Picture"

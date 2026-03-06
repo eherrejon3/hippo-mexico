@@ -24,10 +24,10 @@ export default function AboutPage() {
         The main goal is to create and nourish friendly relations, international understanding and a spirit of sporting competitiveness between young people interested in English language from all around the world.
       </p>
       <p className="container text-[20px]">
-        Aligned to the Common European Framework of Reference for Languages (CEFR), Internationally recognised and Ofqual regulated English language qualifications are used throughout the Olympiad.
+        Aligned to the Common European Framework of Reference for Languages (CEFR), Internationally recognised and certified by the Office of Qualifications and Examinations Regulation (Ofqual) in England, our model is proven to regulate the English language qualifications used throughout the Olympiad.
       </p>
       
-    <Regulations />
+    <div className="container wide"><Regulations /></div>
     </section>
 
   );
